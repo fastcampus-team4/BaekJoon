@@ -119,3 +119,8 @@ dist
 
 #보안관련해서..
 package-lock.json
+package.json
+
+# node_modules
+node_modules/
+
