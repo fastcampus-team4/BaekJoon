@@ -34,6 +34,7 @@ rl.on("line", function (line) {
 
 /* 실패 : 구글링해서 나온 코드를 fs 모듈에 적용해본 것
 설명 : obj 키값에 모두 따옴표를 줘봐도 틀렸다고 나오고 아예 따옴표를 안줬더니 런타임 에러가 나온다 readline 으로 해야 하는 것 같다
+아니다 readline 으로 하지 않아도 된다 여기에 trim 함수를 붙여주지 않아서 생기는 에러.
 
 
 let filePath = process.platform === "linux" ? 0 : "example.txt";
@@ -86,4 +87,6 @@ if (input == "A+") {
 } else if (input == "F") {
   console.log(0.0);
 } 
+
+trim() 함수 넣어야함
 */
