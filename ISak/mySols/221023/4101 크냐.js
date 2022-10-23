@@ -1,5 +1,4 @@
 // https://www.acmicpc.net/problem/4101
-// 틀렸습니다.
 const filePath = process.platform === "linux" ? 0 : "./ISak/input.txt";
 let input = require("fs").readFileSync(filePath).toString().split("\n");
 //마지막 항 제거
