@@ -125,4 +125,4 @@ package.json
 node_modules/
 
 # Mac OS
-.DS_store
+.DS_Store
