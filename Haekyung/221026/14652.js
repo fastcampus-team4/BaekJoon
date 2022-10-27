@@ -8,6 +8,8 @@ const [N, M, K] = require('fs')
   .split(' ')
   .map(Number);
 
+console.log(parseInt(K / M), K % M);
+
 // const arr = [];
 // let k = 0;
 // for (i = 1; i <= N; i++) {
@@ -25,5 +27,3 @@ const [N, M, K] = require('fs')
 //     console.log(i, arr[i].indexOf(K));
 //   }
 // }
-
-console.log(parseInt(K / M), K % M);
