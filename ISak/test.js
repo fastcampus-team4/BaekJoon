@@ -1,16 +1,10 @@
-const input = require('fs').readFileSync('input.txt').toString().split('\n');
-let num = input[0]1;
-console.log(input[1])
-for (let i = 1; i <= num; i += 1) {
-  let arr = input[i].split(' ');
+const filePath = process.platform === "linus" ? 0 : "./ISak/input.txt";
+let input = require("fs").readFileSync(filePath).toString().trim().split("\n");
 
-  let testCase = Number(arr[0])
-  let sum = 0;
-  for (let j = 1; j <= testCase; j += 1) {
-    sum += Number(arr[j]);
+let brokenBtn = input[2].split(" ");
+
+for (let i = 0; i < 10; i++) {
+  if (brokenBtn.includes(`${i})`)) {
+    console.log(i);
   }
-  let average = sum / testCase;
-  let res = arr.filter((elem) => Number(elem) > average);
-
-  console.log(`${((res.length / testCase) 100).toFixed(3)}%`);
 }
