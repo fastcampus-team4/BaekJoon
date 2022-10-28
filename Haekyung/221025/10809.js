@@ -11,8 +11,8 @@ for (i = 97; i < 123; i++) {
 // console.log(alphabet);
 const res = [];
 alphabet.forEach((ele) => {
-  if (input.includes(ele)) {
-    res.push(input.indexOf(ele));
-  } else res.push(-1);
+  // if (input.includes(ele)) {
+  res.push(input.indexOf(ele));
+  // } else res.push(-1);
 });
 console.log(...res);
