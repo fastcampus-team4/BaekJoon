@@ -124,3 +124,5 @@ package.json
 # node_modules
 node_modules/
 
+# Mac OS
+.DS_Store
