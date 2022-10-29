@@ -1,10 +1,16 @@
-const filePath = process.platform === "linus" ? 0 : "./ISak/input.txt";
-let input = require("fs").readFileSync(filePath).toString().trim().split("\n");
+function solution(s) {
+  let answer = "NO";
+  let str = "";
 
-let brokenBtn = input[2].split(" ");
-
-for (let i = 0; i < 10; i++) {
-  if (brokenBtn.includes(`${i})`)) {
-    console.log(i);
+  for (let i = 0; i < s.length; i++) {
+    str = s.split("");
+    str.splice(i, 1);
+    if (str.join("") === str.reverse().join("")) answer = "YES";
   }
+
+  return answer;
 }
+//회문인데 psudo회문은 아닌 경우
+console.log(solution("abba")); // YES
+console.log(solution("abcabbakcba")); // YES
+console.log(solution("abcacbakcba")); // NO
