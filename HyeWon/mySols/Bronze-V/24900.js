@@ -1,4 +1,9 @@
-                                                           :8DDDDDDDDDDDDDD$.                                           
+// https://www.acmicpc.net/problem/24900
+// https://www.acmicpc.net/problem/24900
+const filePath = process.platform === 'linus' ? 0 : './input.txt';
+
+let input = require('fs').readFileSync(filePath).toString().trim().split('\n');
+console.log(`                                                           :8DDDDDDDDDDDDDD$.                                          
                                                       DDDNNN8~~~~~~~~~~=~7DNNDNDDDNNI                                   
                                                   ?NNDD=~=~~~~~~~~~~~~~~~~~=~~==~=INNDNN7                               
                                                +NDDI~~~~~~~~~~~~~~~~~~~~~~~=~~========~ODND+                            
@@ -61,4 +66,4 @@
                                           .DND=~~~~=::~~=NN.   . . 8D~~.~~~~~~=DN$ODNDNDNNNDNNNNND8+~..                 
                                              8DNNI=.~~~~=NDDNNNNDDNDNN.~~~~~IDDNDND7:.                                  
                                                 ?DNNDD?~DD          ~NN~~=NDD$                                          
-                                                     :DDD.            NNNN=                                             
+                                                     :DDD.            NNNN=`);
