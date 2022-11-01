@@ -12,6 +12,7 @@ function solution(input) {
   for (x of input) {
     myMap.set(x, (myMap.get(x) || 0) + 1);
   }
+  console.log(myMap);
   return findAnswer(myMap) || -1;
 }
 let input = [1, 1, 2, 5, 5, 5, 5, 5, 3, 3, 3, 3, 5];
