@@ -1,9 +1,11 @@
 function solution(input) {
-  ans = 0;
+  ans = 1;
+  max = 0;
   console.log(input);
   for (let i = 0; i < input.length - 1; i++) {
-    if (input[i] < input[i + 1]) {
+    if (input[i] < input[i + 1] && max < input[i + 1]) {
       ans++;
+      max = input[i + 1];
     }
   }
 

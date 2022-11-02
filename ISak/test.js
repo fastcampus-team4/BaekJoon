@@ -1,39 +1,14 @@
-const filePath = process.platform === "linux" ? 0 : "./ISak/input.txt";
-let input = require("fs").readFileSync(filePath).toString().trim().split("\n");
-let [N, M] = input.shift().split(" ").map(Number);
-
-function count(r, c) {
-  let ansB = 0;
-  let ansW = 0;
-  for (i = 0; i < 8; i++) {
-    for (j = 0; j < 8; j++) {
-      if ((i + j) % 2 === 0) {
-        if (input[r + i][c + j] !== "B") {
-          ansB++;
-        } else {
-          ansW++;
-        }
-      }
-      if ((i + j) % 2 === 1) {
-        if (input[r + i][c + j] !== "W") {
-          ansB++;
-        } else {
-          ansW++;
-        }
-      }
-    }
+function solution(s) {
+  let sH = {};
+  let odd = 0;
+  for (let x of s) {
+    sH[x] = (sH[x] || 0) + 1;
   }
-  return Math.min(ansB, ansW);
-}
-
-function sol() {
-  ans = [];
-  for (let i = 0; i < N - 8 + 1; i++) {
-    for (let j = 0; j < M - 8 + 1; j++) {
-      ans.push(count(i, j));
-    }
+  for (let key of Object.keys(sH)) {
+    if (sH[key] % 2 == 1) odd++;
   }
-  console.log(Math.min(...ans));
+  return odd > 0 ? s.length - odd + 1 : s.length;
 }
-
-sol();
+console.log(solution("abcbbbccaa"));
+console.log(solution("abcde"));
+console.log(solution("ccc"));
