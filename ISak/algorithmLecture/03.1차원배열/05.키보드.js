@@ -14,5 +14,3 @@ let input = "TeacHer";
 let k = 6;
 let output = solution(input, k);
 console.log(output);
-
-let mySet = new Set([1, 2]);

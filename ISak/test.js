@@ -1,19 +1,14 @@
-const filePath = process.platform === "linux" ? 0 : "./ISak/input.txt";
-const input = require("fs")
-  .readFileSync(filePath)
-  .toString()
-  .trim()
-  .split("\n");
-
-function quotient(a, b) {
-  return parseInt(a / b, 10);
+function solution(s) {
+  let sH = {};
+  let odd = 0;
+  for (let x of s) {
+    sH[x] = (sH[x] || 0) + 1;
+  }
+  for (let key of Object.keys(sH)) {
+    if (sH[key] % 2 == 1) odd++;
+  }
+  return odd > 0 ? s.length - odd + 1 : s.length;
 }
-
-let [A, B, C] = input[0].split(" ").map(Number);
-let D = Number(input[1]);
-let totalSec = C + B * 60 + A * 3600 + D;
-
-let sec = totalSec % 60;
-let min = quotient(totalSec, 60) % 60;
-let hour = quotient(totalSec, 3600) % 24;
-console.log(hour, min, sec);
+console.log(solution("abcbbbccaa"));
+console.log(solution("abcde"));
+console.log(solution("ccc"));

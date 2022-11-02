@@ -7,7 +7,6 @@ function solution(s, k) {
   for (x of s) {
     myMap.set(x, (myMap.get(x) || 0) + 1);
   }
-  console.log(myMap);
   let countOdd = 0;
   for (x of myMap.values()) {
     if (isOdd(x)) countOdd += 1;

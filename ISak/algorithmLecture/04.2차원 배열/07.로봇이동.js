@@ -33,13 +33,11 @@ class Robot {
         break;
     }
     this.fuel--;
-    console.log(this.direction);
     return this.direction;
   }
   go() {
     this.position = this.nextPosition();
     this.fuel--;
-    console.log(this.position);
   }
 }
 function isValidNextPosition(input, myRobot) {
@@ -52,10 +50,9 @@ function isValidNextPosition(input, myRobot) {
 }
 
 function solution(input, k) {
-  let ans;
   let myRobot = new Robot(k);
-  console.log(myRobot.fuel);
   while (myRobot.fuel > 0) {
+    // fuel = k
     if (isValidNextPosition(input, myRobot)) {
       myRobot.go();
     } else {

@@ -3,13 +3,13 @@ function solution(input) {
   let ans = 0;
   let sideMaximums = [];
   let frontMaximums = [];
-  //row 옆쪽에서 본 스카이라인
+  //row-옆쪽에서 본 스카이라인
   for (let i = 0; i < N; i++) {
     const max = Math.max(...input[i]);
     sideMaximums.push(max);
   }
 
-  //column 앞쪽에서 본 스카이라인
+  //column-앞쪽에서 본 스카이라인
   for (let i = 0; i < N; i++) {
     const column = [];
     for (let j = 0; j < N; j++) {
