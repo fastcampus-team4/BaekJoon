@@ -1,19 +1,19 @@
 function findAns(input, peakPts) {
   let maxLength = 0;
-  let leftLength, rightLength, next, prev;
+  let leftLength, rightLength, nextPt, prevPt;
   for (pt of peakPts) {
-    prev = pt;
-    for (next = pt - 1; next >= 0; next--) {
-      if (input[next] >= input[prev]) break;
-      prev = next;
+    prevPt = pt;
+    for (nextPt = pt - 1; nextPt >= 0; nextPt--) {
+      if (input[nextPt] >= input[prevPt]) break;
+      prevPt = nextPt;
     }
-    leftLength = pt - prev;
-    prev = pt;
-    for (next = pt + 1; next < input.length; next++) {
-      if (input[next] >= input[prev]) break;
-      prev = next;
+    leftLength = pt - prevPt;
+    prevPt = pt;
+    for (nextPt = pt + 1; nextPt < input.length; nextPt++) {
+      if (input[nextPt] >= input[prevPt]) break;
+      prevPt = nextPt;
     }
-    rightLength = prev - pt;
+    rightLength = prevPt - pt;
     if (maxLength < leftLength + rightLength) {
       maxLength = leftLength + rightLength;
     }

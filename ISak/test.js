@@ -1,19 +1,39 @@
 const filePath = process.platform === "linux" ? 0 : "./ISak/input.txt";
-const input = require("fs")
-  .readFileSync(filePath)
-  .toString()
-  .trim()
-  .split("\n");
+let input = require("fs").readFileSync(filePath).toString().trim().split("\n");
+let [N, M] = input.shift().split(" ").map(Number);
 
-function quotient(a, b) {
-  return parseInt(a / b, 10);
+function count(r, c) {
+  let ansB = 0;
+  let ansW = 0;
+  for (i = 0; i < 8; i++) {
+    for (j = 0; j < 8; j++) {
+      if ((i + j) % 2 === 0) {
+        if (input[r + i][c + j] !== "B") {
+          ansB++;
+        } else {
+          ansW++;
+        }
+      }
+      if ((i + j) % 2 === 1) {
+        if (input[r + i][c + j] !== "W") {
+          ansB++;
+        } else {
+          ansW++;
+        }
+      }
+    }
+  }
+  return Math.min(ansB, ansW);
 }
 
-let [A, B, C] = input[0].split(" ").map(Number);
-let D = Number(input[1]);
-let totalSec = C + B * 60 + A * 3600 + D;
+function sol() {
+  ans = [];
+  for (let i = 0; i < N - 8 + 1; i++) {
+    for (let j = 0; j < M - 8 + 1; j++) {
+      ans.push(count(i, j));
+    }
+  }
+  console.log(Math.min(...ans));
+}
 
-let sec = totalSec % 60;
-let min = quotient(totalSec, 60) % 60;
-let hour = quotient(totalSec, 3600) % 24;
-console.log(hour, min, sec);
+sol();

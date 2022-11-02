@@ -1,5 +1,4 @@
 function solution(input) {
-  let ans = [];
   let sums = [];
   let sum;
   //row
@@ -17,17 +16,18 @@ function solution(input) {
     }
     sums.push(sum);
   }
+  // diagonal
   sum = 0;
   for (let i = 0; i < 5; i++) {
     sum += input[i][i];
   }
   sums.push(sum);
 
+  // anti-diagonal
   sum = 0;
   for (let i = 0; i < 5; i++) {
     for (let j = 0; j < 5; j++) {
       if (i + j === 4) {
-        console.log(input[i][j]);
         sum += input[i][j];
       }
     }
