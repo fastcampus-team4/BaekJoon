@@ -1,4 +1,5 @@
-3
-WatanabE
-ITO
-YamaMoto
+800
+700
+900
+198
+330
