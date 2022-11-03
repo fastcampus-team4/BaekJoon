@@ -1,6 +1,5 @@
-5
-Lionel Cosgrove
-Alice
-Columbus and Tallahassee
-Shaun and Ed
-Fido
+10
+65
+100
+30
+95

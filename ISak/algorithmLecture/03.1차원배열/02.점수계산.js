@@ -8,6 +8,6 @@ function solution(input) {
   }
   return ans;
 }
-let input = [1, 0, 0, 0, 1];
+let input = [0, 1, 0, 1, 0, 1, 1, 1];
 let output = solution(input);
 console.log(output);
