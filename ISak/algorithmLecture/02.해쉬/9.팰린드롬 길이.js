@@ -23,6 +23,6 @@ function solution(input) {
   return oddSum + evenSum;
 }
 
-let input = "abaabaaaaaaa";
+let input = 'abaabaaaaaaa';
 let output = solution(input);
 console.log(output);
