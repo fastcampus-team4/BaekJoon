@@ -33,6 +33,7 @@ function solution(input) {
   }
   return findAns(input, peakPts);
 }
+console.log(solution([1, 1, 3, 1, 2, 1, 3, 5, 6, 7, 2, 1]));
 //              *--p--*--p--*-----------p-----*
 let input = [1, 1, 3, 1, 2, 1, 3, 5, 6, 7, 2, 1];
 // input = [1, 3, 2, 5, 7, 4, 2, 5, 1]
