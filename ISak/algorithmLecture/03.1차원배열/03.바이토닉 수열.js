@@ -16,6 +16,7 @@ function solution(input) {
   }
   return changeCount === 1 ? "YES" : "NO";
 }
-let input = [1, 2, 3, 2, 1];
+// let input = [1, 2, 3, 2, 1];
+let input = [1, 2, 3, 2, 5, 3, 1];
 let output = solution(input);
 console.log(output);

@@ -16,7 +16,7 @@ function solution(num) {
   return answer;
 }
 
-console.log(solution([1, 2, 3, 4, 5, 3, 1])); // YES ↗️↘️
+console.log(solution([1, 2, 3, 2, 5, 3, 1])); // YES ↗️↘️
 console.log(solution([1, 2, 5, 5, 6, 4, 3])); // NO →
 console.log(solution([1, 3, 8, 5, 3, 9])); // NO ↗️↘️↗️
 console.log(solution([1, 2, 3, 4, 5])); // NO ↗️
