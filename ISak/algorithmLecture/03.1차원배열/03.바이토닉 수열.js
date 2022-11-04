@@ -9,12 +9,13 @@ function solution(input) {
     if (currDiff === 0) return "NO";
 
     if (prevDiff * currDiff < 0) {
+      //부호가 바뀔 때
       changeCount++;
     }
     prevDiff = currDiff;
   }
   return changeCount === 1 ? "YES" : "NO";
 }
-let input = [1,2,3,2,1];
+let input = [1, 2, 3, 2, 1];
 let output = solution(input);
 console.log(output);
