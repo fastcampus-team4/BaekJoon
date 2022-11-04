@@ -3,8 +3,8 @@ let input = require("fs")
   .readFileSync(filePath)
   .toString()
   .trim()
-  .split("\n")
+  .split(" ")
   .map(Number);
+let [K, N, M] = input;
 
-let sum = input.reduce((acc,cur) => acc+Math.max(cur,40), 0)
-console.log(sum/5)
+console.log(Math.max(K * N - M, 0));
