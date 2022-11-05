@@ -19,3 +19,7 @@ for (i = 0; i < 3; i++) {
 N[3] < N[4] ? (cheapV = N[3]) : (cheapV = N[4]);
 
 console.log(cheapB + cheapV - 50);
+
+// 간단하게
+// const [A, B, C, D, E] = N
+// console.log(Math.min(A,B,C) + Math.min(D,E) - 50)
