@@ -9,6 +9,7 @@ function solution(input) {
       }
     }
     ans.push(max);
+    
   }
   return ans;
 }
