@@ -15,7 +15,8 @@ function solution(s) {
     }
     answer.push(score);
   }
-  return Math.max.apply(null, answer);
+  // return Math.min.apply(null, answer);
+  return Math.max(...answer);
 }
 
 console.log(solution(input));
