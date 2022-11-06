@@ -15,5 +15,5 @@ let input = require("fs").readFileSync(filePath).toString().trim().split("\n");
 
 for (let i = 1; i < input.length; i++) {
   let testCase = input[i].trim();
-  console.log(`${testCase.charAt(0)}${testCase.slice(-1)}`);
+  console.log(`${testCase.charAt(0)}${testCase.charAt(testCase.length - 1)}`);
 }

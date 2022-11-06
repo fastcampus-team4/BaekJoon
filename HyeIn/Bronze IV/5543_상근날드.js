@@ -21,3 +21,8 @@ console.log(Math.min(answer));
  근데 answer 값 안에 typeof 를 확인해보면 모두 number 가 뜸
  왜 NaN 이 뜨는 걸까?
 */
+
+/* 이삭님 피드백
+Math.min() 메소드는 배열이 아니라 숫자들이 들어가야 함
+배열을 넣으려면 Math.min(...[1,2,3,4]) 
+*/
