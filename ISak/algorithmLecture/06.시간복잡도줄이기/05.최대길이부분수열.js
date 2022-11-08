@@ -1,12 +1,10 @@
 function solution(cost, m) {
-  let left = 0;
-  let right = 0;
   let maxLength = 0;
 
   for (let left = 0; left < cost.length; left++) {
     let length = 0;
-
     let leftZero = m;
+
     for (let right = left; right < cost.length; right++) {
       if (leftZero === 0 && cost[right] === 0) break;
       if (cost[right] === 1) {
