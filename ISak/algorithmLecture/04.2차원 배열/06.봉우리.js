@@ -7,7 +7,6 @@ function isItPeak(input, x, y) {
   if (x + 1 < N) checkList.push([x + 1, y]);
   if (y - 1 >= 0) checkList.push([x, y - 1]);
   if (y + 1 < N) checkList.push([x, y + 1]);
-
   for ([i, j] of checkList) {
     if (input[i][j] > center) {
       return false;
