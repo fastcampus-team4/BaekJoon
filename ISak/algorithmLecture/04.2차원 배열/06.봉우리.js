@@ -1,5 +1,5 @@
 //input[x][y]가 봉우리인가?
-function isPeak(input, x, y) {
+function isItPeak(input, x, y) {
   const N = input.length;
   const center = input[x][y];
   const checkList = [];
@@ -7,7 +7,6 @@ function isPeak(input, x, y) {
   if (x + 1 < N) checkList.push([x + 1, y]);
   if (y - 1 >= 0) checkList.push([x, y - 1]);
   if (y + 1 < N) checkList.push([x, y + 1]);
-
   for ([i, j] of checkList) {
     if (input[i][j] > center) {
       return false;
@@ -20,7 +19,7 @@ function solution(input) {
   let ans = 0;
   for (let i = 0; i < input.length; i++) {
     for (let j = 0; j < input.length; j++) {
-      if (isPeak(input, i, j)) {
+      if (isItPeak(input, i, j)) {
         ans++;
       }
     }
