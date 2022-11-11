@@ -12,4 +12,5 @@ if(num === 0) {
   num = 3;
 }
 
+
 console.log(num)

@@ -3,4 +3,5 @@ let [a, b] = require('fs').readFileSync(filePath).toString().trim().split(' ').m
 
 const M = (b - a) / 400
 const answer = 1 / (1 + Math.pow(10, M))
+
 console.log(answer)
