@@ -1,5 +1,5 @@
 function solution(input) {
-  let sticks = input.replaceAll("()", "*"); // 레이저: *
+  let sticks = input.replaceAll("()", "*"); // 레이저 : *
   let stack = [];
   let sum = 0;
   for (let i = 0; i < sticks.length; i++) {
