@@ -13,4 +13,5 @@ if(s + k + h >= 100) {
   answer = "Hanyang"
 }
 
+
 console.log(answer)
