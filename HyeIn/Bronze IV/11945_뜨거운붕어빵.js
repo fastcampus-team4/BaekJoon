@@ -1,18 +1,9 @@
-// 런타임 에러!!!
 let filePath = process.platform === "linux" ? 0 : "example.txt";
-let input = require("fs")
-  .readFileSync(filePath)
-  .toString()
-  .trim()
-  .split("\n")
-  .map((el) => el.trim());
-let [n, m] = input[0].split(" ").map(Number);
+let input = require("fs").readFileSync(filePath).toString().trim().split("\n");
 
-let answer = [];
-for (let i = 1; i <= n; i++) {
-  answer.push(input[i].split("").reverse().join(""));
+for (let i = 1; i < input.length; i++) {
+  console.log(input[i].trim().split("").reverse().join(""));
 }
-console.log(answer.join("\n"));
 
 // 런타임 에러!!!
 /* let filePath = process.platform === "linux" ? 0 : "example.txt";
