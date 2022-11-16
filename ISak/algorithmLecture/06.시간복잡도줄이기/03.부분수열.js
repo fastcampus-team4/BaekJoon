@@ -1,16 +1,15 @@
 function solution(nums, m) {
   let count = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    let sum = 0;
-    for (let j = i; j < nums.length; j++) {
-      sum += nums[j];
-      if (sum === m) {
-        count++;
-        break;
-      } else if (sum > m) {
-        break;
-      }
+  let sum = 0;
+  let left = 0;
+  for (let right = 0; right < nums.length; right++) {
+    sum += nums[right];
+    while (sum > m && left <= right) {
+      sum -= nums[left];
+      left++;
+    }
+    if (sum === m) {
+      count++;
     }
   }
 
