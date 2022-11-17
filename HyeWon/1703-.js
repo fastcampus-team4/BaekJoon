@@ -1,14 +1,14 @@
 // https://www.acmicpc.net/problem/1703
-const filePath = process.platform === 'linux' ? 0 : './input.txt';
-let input = require('fs').readFileSync(filePath).toString().trim().split('\n');
-input.pop();
-const answer = [];
-for (let i = 0; i < input.length; i++) {
-  let arr = input[i].split(' ').map(Number);
-  let leaf = 1;
+const filePath = process.platform === 'linux' ? 0 : 'input.txt';
+const input = require('fs').readFileSync(filePath).toString().trim().split('\n');
+
+const res = [];
+for (let i = 0; i < input.length - 1; i++) {
+  const arr = input[i].trim().split(' ').map(Number);
+  let answer = 1;
   for (let j = 1; j < arr.length; j += 2) {
-    leaf = leaf * arr[j] - arr[j + 1];
+    answer = answer * arr[j] - arr[j + 1];
   }
-  answer.push(leaf);
+  res.push(answer);
 }
-console.log(answer.join('\n'));
+console.log(res.join('\n'));
