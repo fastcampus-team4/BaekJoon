@@ -1,6 +1,6 @@
 function solution(nums) {
   const n = nums.length;
-  let min, minIndex, temp;
+  let min, minIndex;
   for (let i = 0; i < n; i++) {
     min = Number.MAX_SAFE_INTEGER;
     for (let j = i; j < n; j++) {
@@ -9,9 +9,7 @@ function solution(nums) {
         minIndex = j;
       }
     }
-    temp = nums[minIndex];
-    nums[minIndex] = nums[i];
-    nums[i] = temp;
+    [nums[minIndex], nums[i]] = [nums[i], nums[minIndex]];
   }
 
   return nums;

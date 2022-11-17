@@ -1,17 +1,24 @@
-const filePath = process.platform === "linux" ? 0 : "./ISak/input.txt";
-let input = require("fs").readFileSync(filePath).toString().trim().split("\n");
+function solution(nums) {
+  let n = nums.length;
+  let j;
 
-const inputData = input
-// inputData
-// const a = inputData[0].split(" ").map(Number)[0];
-// const b = inputData[0].split(" ").map(Number)[1];
-// const c = inputData[1].split(" ").map(Number)[0];
-// const d = inputData[1].split(" ").map(Number)[1];
-const a = Number(inputData[0][0]);
-const b = Number(inputData[0][2]);
-const c = Number(inputData[1][0]);
-const d = Number(inputData[1][2]);
-console.log(inputData[0][2])
-console.log(inputData[1])
-const answer = a + d >= b + c ? b + c : a + d;
-console.log(answer);
+  for (let i = 1; i < n; i++) {
+    let tmp = nums[i];
+    for (j = i - 1; j >= 0; j--) {
+      if (nums[j] > tmp) nums[j + 1] = nums[j];
+      else break;
+    }
+    nums[j + 1] = tmp; // j 다음자리에 3을 넣어라
+  }
+  return nums;
+}
+
+console.log(solution([5, 4, 2, 1, 3]));
+
+/* 
+[5,4,2,1,3]   4의 i=1  j=0
+[4,5,2,1,3]   2의 i=2  j=1,0
+[2,4,5,1,3]   1의 i=3  j=2,1,0
+[1,2,4,4,5]   3의 i=4, j=3,2,1,0    , nums[i]=3 (temp=3)
+[1,2,3,4,5]
+*/
