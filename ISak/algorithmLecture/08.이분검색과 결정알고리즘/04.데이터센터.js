@@ -6,7 +6,7 @@ function solution(input) {
     sum += x;
     sumArr.push(sum);
   }
-
+  // sumArr 에서 totalSum/2 이상인 값중에 제일 큰 index를 찾자
   let max = sumArr.length - 1;
   let min = 0;
   const ansArr = [];
