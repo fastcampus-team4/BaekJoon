@@ -2,17 +2,19 @@
 const filePath = process.platform === 'linux' ? 0 : './input.txt';
 let input = require('fs').readFileSync(filePath).toString().trim().split('\n');
 
-const t = Number(input.shift());
+const arr = input.filter((e) => e !== '').map(BigInt);
+const t = Number(arr.shift());
+let cnt = 0;
 for (let i = 0; i < t; i++) {
-  if (input[i] === '') {
-    input.shift();
-    continue;
-  }
-  let n = Number(input.shift());
+  let n = arr[cnt];
+  let tmp = n;
+  cnt++;
   let sum = 0n;
-  for (let j = 0; j < n; j++) {
-    sum += BigInt(input.shift());
+  n += BigInt(cnt);
+  while (cnt < n) {
+    sum += arr[cnt];
+    cnt++;
   }
-  if (sum % BigInt(n) === 0n) console.log('YES');
+  if (sum % tmp === 0n) console.log('YES');
   else console.log('No');
 }
