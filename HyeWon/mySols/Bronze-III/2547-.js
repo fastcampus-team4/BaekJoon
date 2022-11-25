@@ -16,5 +16,5 @@ for (let i = 0; i < t; i++) {
     cnt++;
   }
   if (sum % tmp === 0n) console.log('YES');
-  else console.log('No');
+  else console.log('NO');
 }
