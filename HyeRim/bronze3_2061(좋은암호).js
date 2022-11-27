@@ -22,4 +22,4 @@ for (let i = 2; i <= k; i += 1) {
     }
 }
 
-console.log(result)
+console.log(result);
