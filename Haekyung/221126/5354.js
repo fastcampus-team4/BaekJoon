@@ -20,8 +20,7 @@ for (let i = 1; i < input.length; i++) {
       res += '#' + 'J'.repeat(input[i] - 2) + '#' + '\n';
     }
   }
-  answer.push(res);
+  answer.push(res.trim());
 }
 
-console.log(answer.join('\n\n').trim());
-console.log(input);
+console.log(answer.join('\n\n'));
